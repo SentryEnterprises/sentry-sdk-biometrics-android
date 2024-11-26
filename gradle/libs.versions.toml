@@ -1,0 +1,66 @@
+[versions]
+agp = "8.6.0"
+
+appcompat = "1.7.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+kotlin = "2.0.10" # https://kotlinlang.org/docs/releases.html#release-details
+kotlinxCoroutinesAndroid = "1.8.0"
+lifecycleViewmodelKtx = "2.8.5"
+lottie = "6.5.0"
+material = "1.12.0"
+navigationSafeArgsGradlePlugin = "2.8.0"
+navigationUiKtx = "2.7.7"
+timber = "5.0.1"
+composeBom = "2024.09.00" # https://developer.android.com/develop/ui/compose/bom/bom-mapping
+serialization = "1.6.3"
+
+[libraries]
+# Compatability with Kotlin: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+# Library matrix map: https://developer.android.com/jetpack/compose/bom/bom-mapping
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-runtime = { module = "androidx.compose.runtime:runtime" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.8.0-rc01" }
+compose-layout = { module = "androidx.compose.foundation:foundation-layout" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-icons = { module = "androidx.compose.material:material-icons-extended" }
+compose-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-animation = { module = "androidx.compose.animation:animation" }
+
+
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+junit = { module = "junit:junit", version.ref = "junit" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version = "6.5.0" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationSafeArgsGradlePlugin" }
+navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
+
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+androidLibrary = { id = "com.android.library", version = "8.6.0" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+[bundles]
+compose = [
+    "compose-runtime",
+    "compose-material3",
+    "compose-navigation",
+    "compose-icons",
+    "compose-foundation",
+    "compose-layout",
+    "compose-tooling",
+    "compose-tooling-preview",
+    "compose-animation",
+]
