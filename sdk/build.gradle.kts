@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sentryenterprises.sentry.sdk"
+    namespace = "com.sentrycard.sdk"
     compileSdk = 34
 
     defaultConfig {

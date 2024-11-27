@@ -12,6 +12,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.maven.publish) apply false
 }
 
 allprojects {
@@ -21,7 +22,3 @@ allprojects {
         mavenCentral()
     }
 }
-
-//task clean(type: Delete) {
-//    delete rootProject.buildDir
-//}
