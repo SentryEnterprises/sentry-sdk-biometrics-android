@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlinx-serialization")
+    id("com.vanniktech.maven.publish")
 }
 
 android {
@@ -55,7 +56,6 @@ android {
 dependencies {
     implementation("net.java.dev.jna:jna:5.13.0@aar")
 
-    implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.kotlinx.serialization.json)
 
